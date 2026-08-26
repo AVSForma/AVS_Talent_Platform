@@ -1,0 +1,43 @@
+*** Begin Patch
+*** Add File: hero-cta.patch
++diff --git a/app/page.js b/app/page.js
++new file mode 100644
++index 0000000..1111111
++--- /dev/null
+++++ b/app/page.js
++@@ -0,0 +1,86 @@
+++"use client";
+++
+++import React from "react";
+++
+++export default function Home() {
+++  const platformUrl = process.env.NEXT_PUBLIC_PLATFORM_URL || "/api/platform-ui";
+++
+++  return (
+++    <main style={{ fontFamily: "Inter, system-ui, -apple-system, sans-serif" }}>
+++      <section style={{ padding: "48px 24px", maxWidth: 1200, margin: "0 auto" }}>
+++        <div style={{ display: "grid", gridTemplateColumns: "1fr 460px", gap: 32, alignItems: "center" }}>
+++          <div>
+++            <div style={{ display: "inline-block", background: "#e6fffa", color: "#065f46", padding: "6px 10px", borderRadius: 9999, fontWeight: 700, fontSize: 13 }}>AVS TALENT PLATFORM</div>
+++
+++            <h1 style={{ fontSize: 44, lineHeight: 1.05, margin: "18px 0 16px", color: "#0f172a" }}>Talente, die wirklich zu Ihrem Unternehmen passen.</h1>
+++
+++            <p style={{ color: "#475569", fontSize: 17, marginBottom: 22 }}>Wir verbinden qualifizierte Fachkräfte und motivierte Auszubildende aus Tunesien mit verantwortungsvollen Arbeitgebern in Deutschland.</p>
+++
+++            <div style={{ display: "flex", gap: 12, flexWrap: "wrap" }}>
+++              <a href={platformUrl} style={{ display: "inline-block", background: "linear-gradient(90deg,#0ea5a4,#06b6d4)", color: "#fff", padding: "12px 20px", borderRadius: 10, textDecoration: "none", fontWeight: 700 }}>Talente entdecken</a>
+++              <a href={platformUrl} style={{ display: "inline-block", background: "#0b7285", color: "#fff", padding: "12px 20px", borderRadius: 10, textDecoration: "none", fontWeight: 700 }}>Unverbindlich anfragen</a>
+++              <a href={platformUrl} style={{ display: "inline-block", background: "transparent", color: "#0b7285", padding: "12px 20px", borderRadius: 10, textDecoration: "underline", fontWeight: 700 }}>Anmelden</a>
+++            </div>
+++          </div>
++
+++          <div style={{ justifySelf: "end" }}>
+++            <img src="/images/hero-team-v2.jpg" alt="AVS Team" style={{ width: 420, height: "auto", borderRadius: 12, display: "block", objectFit: "cover" }} />
+++          </div>
+++        </div>
+++      </section>
+++    </main>
+++  );
+++}
++
+*** End Patch
